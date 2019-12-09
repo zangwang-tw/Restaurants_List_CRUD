@@ -1,0 +1,42 @@
+<form action="/view/{{{restaurantInfo.id}}}" method="POST">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h3>新增餐廳</h3>
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="餐廳中文名稱" name="name" value="{{restaurantInfo.name}}" required="true">
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="餐廳英文名稱" value="{{restaurantInfo.name_en}}" name="name_en" required="true">
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="類別" value="{{restaurantInfo.category}}" name="category" required="true">
+      </div>
+      <div class="col-3 mt-3">
+        <input class="form-control" type="text" placeholder="電話" value="{{restaurantInfo.phone}}" name="phone" required="true">
+      </div>
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="餐廳地址" value="{{restaurantInfo.location}}" name="location" required="true">
+      </div>
+      <div class="col-3 mt-3">
+        <input class="form-control" type="number" placeholder="評分" value="{{restaurantInfo.rating}}" name="rating" required="true">
+      </div>
+
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="相片網址" value="{{restaurantInfo.image}}" name="image" required="true">
+      </div>
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="google地圖網址" value="{{restaurantInfo.google_map}}" name="google_map" required="true">
+      </div>
+
+      <div class="col-12 mt-3">
+        <textarea class="form-control" type="text" placeholder="簡介" rows="5" name="description"
+          required="true">{{restaurantInfo.description}}</textarea>
+      </div>
+      <div class="col-12 mt-3">
+        <button type="submit"" class=" tn btn-primary btn-lg btn-block mb-5">確認修改</button>
+      </div>
+    </div>
+  </div>
+</form>

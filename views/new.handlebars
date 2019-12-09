@@ -1,0 +1,51 @@
+<form action="/view" method="POST">
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-12 mb-4">
+        <h3>新增餐廳</h3>
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="餐廳中文名稱" name="name" required="true">
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="餐廳英文名稱" name="name_en" required="true">
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="類別" name="category" required="true">
+      </div>
+      <div class="col-3 mt-3">
+        <input class="form-control" type="text" placeholder="電話" name="phone" required="true">
+      </div>
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="餐廳地址" name="location" required="true">
+      </div>
+      <div class="col-3 mt-3">
+        <input class="form-control" type="number" placeholder="評分" name="rating" required="true">
+      </div>
+
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="相片網址" name="image" required="true">
+      </div>
+      <div class="col-6 mt-3">
+        <input class="form-control" type="text" placeholder="google地圖網址" name="google_map" required="true">
+      </div>
+      
+      <div class="col-12 mt-3">
+        <textarea class="form-control" type="text" placeholder="簡介" rows="5" name="description" required="true"></textarea>
+      </div>
+      <div class="col-12 mt-3">
+        <button type="submit"" class="tn btn-primary btn-lg btn-block mb-5">確認</button>
+      </div>
+  </div>
+</div>
+</form>
+
+        {{!-- name --}}
+        {{!-- name_en --}}
+        {{!-- category --}}
+        {{!-- image url --}}
+        {{!-- location --}}
+        {{!-- phone --}}
+        {{!-- google map --}}
+        {{!-- rating --}}
+        {{!-- description --}}
