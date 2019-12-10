@@ -11,7 +11,7 @@ An [AlphaCamp](https://tw.alphacamp.co/) simple login system practiced based on 
 * 刪除餐廳資料
 
 # Preview 預覽
-![](https://i.imgur.com/GUleeDb.jpg)
+![](https://i.imgur.com/rKJQIvF.jpg)
 ![](https://i.imgur.com/HkZaNMH.jpg)
 ![](https://i.imgur.com/BK7GlND.jpg)
 
@@ -134,6 +134,6 @@ Handlebars`{{#each}}`產生的資料讀不進Boostrap的Modal中，原來是Moda
 開啟瀏覽器輸入`http://localhost:3000/`於本機端瀏覽專案
 
 # Thanks 感謝🎉
-![](https://i.imgur.com/1dVrjpi.png =350x)
+![](https://i.imgur.com/1dVrjpi.png)
 
 
