@@ -22,7 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 // mongoose 連線
-mongoose.connect('mongodb://localhost/restaurants', { useNewUrParser: true })
+mongoose.connect('mongodb://localhost/restaurants', {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,})
 
 // 請mongoose用 `mongoose.connection`拿到資料庫物件
 const db = mongoose.connection
@@ -43,8 +45,11 @@ const restSchema = require('./models/restaurant')
 // 載入路由
 // 首頁
 app.use('/',require('./routes/home'))
+// 搜尋
+app.use('/', require('./routes/search'))
 // 功能
 app.use('/view', require('./routes/restaurant'))
+
 
 // 通訊埠
 app.listen(3000, () => {

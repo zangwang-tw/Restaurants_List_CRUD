@@ -41,14 +41,6 @@ router.get('/:id', (req, res) => {
     return res.render('show', { restaurant: resSchema })
   })
 })
-// 搜尋篩選餐廳
-router.get('/search', (req, res) => {
-  res.render('搜尋特定餐廳')
-})
-// 排序顯示餐廳
-router.get('/order', (req, res) => {
-  res.render('排序顯示餐廳')
-})
 
 //  ===== U =====
 // 修改餐廳的頁面
