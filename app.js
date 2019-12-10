@@ -86,7 +86,7 @@ app.get('/view/:id', (req, res) => {
   })
 })
 // 搜尋篩選餐廳
-app.get('/view/search', (req, res) => {
+app.get('/search', (req, res) => {
   res.render('搜尋特定餐廳')
 })
 // 排序顯示餐廳
@@ -124,8 +124,14 @@ app.post('/view/:id', (req, res) => {
 
 // ===== D =====
 // 刪除餐廳
-app.post('/view/:id', (req, res) => {
-  res.send('刪除餐廳')
+app.post('/view/:id/delete', (req, res) => {
+  restSchema.findById(req.params.id,(err,restSchema)=>{
+    if(err) return console.error(err)
+    restSchema.remove(err => {
+      if (err) return console.error(err)
+      return res.redirect('/')
+    })
+  })
 })
 
 // 不太懂 put/delete 要另外設定的意思

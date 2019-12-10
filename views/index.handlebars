@@ -35,17 +35,63 @@
             <div class="card-body p-3">
               <div class="restaurant-category mb-1" style="display: inline">
                 <i class="fas fa-utensils pr-2"></i> {{this.category}}
-                  <a href="#">
+                {{!-- <a href="#">
                     <span class="badge badge-secondary float-right ml-2">Delete</span>
-                  </a>
-                  <a href="/view/{{{this.id}}}/edit">
-                    <span class="badge badge-info float-right">Edit</span>
-                  </a>
+                  </a> --}}
+                {{!-- 測試動態視窗modal --}}
+                <!-- Button trigger modal -->
+                {{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Launch demo modal
+                  </button> --}}
+
+                <a href="#" data-toggle="modal" data-target="#delete{{this.id}}">
+                  <span class="badge badge-secondary float-right ml-2">Delete</span>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="delete{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteRest"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteRest">刪除「{{this.name}}」</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-4">
+                            <img src="{{this.image}}" class="img-thumbnail rounded float-left mx-auto"
+                              style="height: 100px;">
+                          </div>
+                          <div class="col">
+                            <h5>{{this.name}}</h5>
+                            <p><i class="fas fa-utensils pr-2"></i>{{this.category}}</p>
+                            <p class="mr-3">{{this.description}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <form action="/view/{{{this.id}}}/delete" method="POST"></form>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        <button type="submit" class="btn btn-danger">確認刪除</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                {{!-- 修改按鈕 --}}
+                <a href="/view/{{{this.id}}}/edit">
+                  <span class="badge badge-info float-right">Edit</span>
+                </a>
               </div>
             </div>
           </div>
         </a>
-        
+
         {{/each}}
       </div>
     </div>
